@@ -1,0 +1,10 @@
+{% if task_list %}
+    <ul>
+    {% for task in task_list %}
+        <li><a href="/projects/{{ project }}/{{ task.id_task }}/">{{ task.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No tasks created yet</p>
+{% endif %}
+<a href="/projects/{{ project }}/new/"><button>Создать</button></a>
